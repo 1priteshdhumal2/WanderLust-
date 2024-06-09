@@ -49,7 +49,7 @@ body {
     align-items: center;
 }
 
-.card {
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
 }
@@ -64,7 +64,7 @@ body {
     padding: 0 !important;
 }
 
-.card-text p{
+.card-text p {
     font-weight: 400 !important;
 }
 
@@ -76,23 +76,23 @@ body {
     opacity: 0;
 }
 
-.card-img-overlay:hover{
+.card-img-overlay:hover {
     opacity: 0.2;
     background-color: white;
 }
 
 .container {
-    flex : 1;
+    flex: 1;
 }
 
 .add-btn {
     background-color: #fe424d !important;
-    border : none !important;
+    border: none !important;
 }
 
 .edit-btn {
     background-color: #fe424d !important;
-    border : none !important;
+    border: none !important;
 }
 
 .show-image {
