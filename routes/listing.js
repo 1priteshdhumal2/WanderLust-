@@ -25,10 +25,11 @@ router
   .put(
     isLoggedIn,
     isOwner,
+    upload.single("listing[image]"),
     ValidateListing,
-    wrapAsync(listingController.renderUpdateForm)
+    wrapAsync(listingController.updateListing)
   )
-  .delete(isLoggedIn, isOwner, wrapAsync(listingController.renderDeleteForm));
+  .delete(isLoggedIn, isOwner, wrapAsync(listingController.destroyListing));
 
 //Edit route
 router.get(
