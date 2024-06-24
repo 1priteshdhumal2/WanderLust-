@@ -1,4 +1,7 @@
 <% layout('/layouts/boilerplate') -%>
+<script>
+  const mapToken = "<%= process.env.MAP_TOKEN %>";
+</script>
 
 <body>
   <div class="row mt-3">
@@ -37,7 +40,7 @@
   <% } %>
 
   <hr />
-  <div class="col-8 offset-3">
+  <div class="col-8 offset-3 mb-3">
     <% if(currUser) { %>
     <h4>Leave a Review</h4>
     <form
@@ -110,10 +113,9 @@
       </div>
       <button class="btn btn-outline-dark">Submit</button>
     </form>
-    <% } %>
-
-    <p><b>All reviews</b></p>
+    <% } %> <% if (listing.reviews.length > 0 ) { %>
     <div class="row">
+      <p><b>All reviews</b></p>
       <% for(review of listing.reviews) { %>
       <div class="card col-5 ms-3 mb-3">
         <div class="card-body">
@@ -134,13 +136,19 @@
       </div>
       <% } %>
     </div>
+    <% } %>
   </div>
-
-  <!-- <ul>
-            <li><%= listing.title %></li>
-            <li><%= listing.description %></li>
-            <li> &#8377 <%= listing.price.toLocaleString("en-IN") %></li>
-            <li><%= listing.location %></li>
-            <li><%= listing.country %></li>
-        </ul> -->
+  <div class="col-8 offset-3 mb3">
+    <h3>Where you'll be</h3>
+    <div id="map"></div>
+  </div>
+  <script src="/js/map.js"></script>
 </body>
+
+<!-- <ul>
+          <li><%= listing.title %></li>
+          <li><%= listing.description %></li>
+          <li> &#8377 <%= listing.price.toLocaleString("en-IN") %></li>
+          <li><%= listing.location %></li>
+          <li><%= listing.country %></li>
+      </ul> -->
