@@ -14,7 +14,7 @@ router
     isLoggedIn,
     upload.single("listing[image]"),
     ValidateListing,
-    wrapAsync(listingController.renderCreateForm)
+    wrapAsync(listingController.createListing)
   );
 //New Route
 router.get("/new", isLoggedIn, listingController.renderNewform);
