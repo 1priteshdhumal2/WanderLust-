@@ -6,6 +6,13 @@ const map = new mapboxgl.Map({
   zoom: 8, // starting zoom
 });
 
+let newlocation = listing.location;
+
 const marker1 = new mapboxgl.Marker({ color: "red" })
   .setLngLat(coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 20 }).setHTML(
+      `<h4>${newlocation}</h4><p>Exact location will be provided after booking`
+    )
+  )
   .addTo(map);
