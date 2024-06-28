@@ -10,9 +10,7 @@ Wanderlust is a clone of the Airbnb website, built using Node.js, Express.js, Mo
 2. [Usage](#usage)
 3. [Credits](#credits)
 4. [License](#license)
-5. [Badges](#badges)
-6. [Contributing](#contributing)
-7. [Tests](#tests)
+5. [Contributing](#contributing)
 
 ## Installation
 
@@ -66,10 +64,6 @@ To get a local copy up and running, follow these steps:
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Badges
-
-![Node.js CI](https://github.com/your-username/wanderlust/workflows/Node.js%20CI/badge.svg)
 
 ## Contributing
 
